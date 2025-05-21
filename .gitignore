@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+dist/
+.env
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# React / Vite
+.vite/
+build/
+.DS_Store
+
+# System
+*.swp
+*.swo
+.idea/
+.vscode/
+*.iml
+
+# TypeORM
+ormconfig.ts
+ormconfig.js

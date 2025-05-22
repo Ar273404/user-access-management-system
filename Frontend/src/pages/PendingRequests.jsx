@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { Api } from "../Api.jsx";
 
 const PendingRequests = () => {
   const { token } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const PendingRequests = () => {
     setError(null);
     setMessage(null);
     try {
-      const res = await fetch("http://localhost:5000/api/requests/pending", {
+      const res = await fetch(`${Api}/api/requests/pending`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -48,7 +49,7 @@ const PendingRequests = () => {
     setMessage(null);
 
     try {
-      const res = await fetch(`http://localhost:5000/api/requests/${id}`, {
+      const res = await fetch(`${Api}/api/requests/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

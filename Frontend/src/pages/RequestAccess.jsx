@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { Api } from "../Api.jsx";
 
 const RequestAccess = () => {
   const { token } = useContext(AuthContext);
@@ -26,7 +27,7 @@ const RequestAccess = () => {
     setLoadingSoftwares(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:5000/api/software/", {
+      const res = await fetch(`${Api}/api/software/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -72,7 +73,7 @@ const RequestAccess = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/requests/",
+        `${Api}/api/requests/`,
         {
           method: "POST",
           headers: {

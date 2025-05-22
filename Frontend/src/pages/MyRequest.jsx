@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { Api } from "../Api.jsx";
 
 const MyRequests = () => {
   const { token } = useContext(AuthContext);
@@ -9,7 +10,7 @@ const MyRequests = () => {
 
   const fetchMyRequests = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/requests/my", {
+      const res = await fetch(`${Api}/api/requests/my`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

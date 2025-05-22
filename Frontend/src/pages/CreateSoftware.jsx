@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-
+import { Api } from "../Api.jsx";
 const accessLevelOptions = ["Read", "Write", "Admin"];
 
 const CreateSoftware = () => {
@@ -22,7 +22,7 @@ const CreateSoftware = () => {
     accessLevels: [],
   });
 
-  const apiUrl = "http://localhost:5000/api/software";
+  const apiUrl = `${Api}/api/software`;
 
   // Fetch all software on mount
   useEffect(() => {

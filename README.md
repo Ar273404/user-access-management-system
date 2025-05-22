@@ -178,8 +178,15 @@ npm run dev
   </li>
 </ol>
 
-<p><b>Frontend:</b> http://localhost:5173<br>
-<b>Backend:</b> http://localhost:5000</p>
+<h3>🔗 Application URLs</h3>
+
+<ul>
+  <li><b>Frontend (Live):</b> <a href="https://user-access-management-system-1-62d1.onrender.com/" target="_blank">https://user-access-management-system-1-62d1.onrender.com/</a></li>
+  <li><b>Backend (Live API):</b> <a href="https://user-access-management-system-4uty.onrender.com/" target="_blank">https://user-access-management-system-4uty.onrender.com/</a></li>
+  <li><b>Frontend (Local):</b> <code>http://localhost:5173</code></li>
+  <li><b>Backend (Local):</b> <code>http://localhost:5000</code></li>
+</ul>
+
 
 <hr/>
 

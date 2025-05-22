@@ -6,6 +6,10 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running on Render!");
+});
+
 // Connect to DB and start server
 AppDataSource.initialize()
   .then(() => {
